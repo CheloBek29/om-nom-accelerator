@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonNameChanger : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class ButtonNameChanger : MonoBehaviour
         gameObject.name = levelName;
     }
 
-    public void OnClick()
-    {
-        sceneChanger.ChangeScene(levelName);
+
+    public void Start() {
+        gameObject.GetComponent<Button>().onClick.AddListener(() => { sceneChanger.ChangeScene(levelName); });
     }
+    
+    
 }
