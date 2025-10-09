@@ -53,7 +53,7 @@ public class Caesar : MonoBehaviour
         string cypherRes = "";
         foreach (char c in cypherText)
         {
-            int resIndex = (_alphabetDict[c] + shift) % 33;
+            int resIndex = (_alphabetDict[c] - shift + 33) % 33;
             char resLetter = _alphabetDict.FirstOrDefault(x => x.Value == resIndex).Key;
             cypherRes += resLetter;
         }
@@ -62,7 +62,7 @@ public class Caesar : MonoBehaviour
 
     public void Decrypt()
     {
-        resText.text = this.shift(cypherText.text.ToLower(), -Int32.Parse(shiftNum.text));
+        resText.text = this.shift(cypherText.text.ToLower(), Int32.Parse(shiftNum.text));
 
     }
 }
