@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Data.Common;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class ClickManager : MonoBehaviour
