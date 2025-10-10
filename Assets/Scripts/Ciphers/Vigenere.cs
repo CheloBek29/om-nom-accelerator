@@ -4,11 +4,11 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class Caesar : MonoBehaviour
+public class Vigenere : MonoBehaviour
 {
-    [SerializeField] TMP_Text shiftNum;
-    [SerializeField] TMP_Text cypherText;
-    [SerializeField] TMP_Text resText;
+    [SerializeField] TMP_Text m_cypherKey;
+    [SerializeField] TMP_Text m_cypherText;
+    [SerializeField] TMP_Text m_resText;
 
     private char[] _alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя".ToCharArray();
     private Dictionary<char, int> _alphabetDict = new()
@@ -48,21 +48,31 @@ public class Caesar : MonoBehaviour
         {'я', 32}
     };
 
-    private string shift(string cypherText, int shift=1)
+    private string getResKey(string key, int n)
     {
-        string cypherRes = "";
-        foreach (char c in cypherText)
+        string res = "";
+        for (int i = 0; i < n; i++)
         {
-            int resIndex = (_alphabetDict[c] - shift + 33) % 33;
-            char resLetter = _alphabetDict.FirstOrDefault(x => x.Value == resIndex).Key;
-            cypherRes += resLetter;
+            res += key[i % (key.Length - 1)];
         }
-        return cypherRes;
+
+        return res;
     }
 
     public void Decrypt()
     {
-        resText.text = this.shift(cypherText.text.ToLower(), Int32.Parse(shiftNum.text));
+        string key = getResKey(m_cypherKey.text, m_cypherText.text.Length).ToLower();
+        string encryptedText = m_cypherText.text.ToLower();
+        string res = "";
+        for (int i = 0; i < key.Length; i++)
+        {
+            int keyLetId = _alphabetDict[key[i]];
+            int encLetId = _alphabetDict[encryptedText[i]];
+            int decLetId = (encLetId - keyLetId + 33) % 33;
+            char resLet = _alphabet[decLetId];
+            res += resLet;
+        }
 
+        m_resText.text = res;
     }
 }
