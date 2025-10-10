@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Map.unity
     guid: a00ca75ba4cff4e3f91abd06e2807e04
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/Caesar.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Ceaser.unity
