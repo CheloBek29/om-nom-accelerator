@@ -4390,10 +4390,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 799269210}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: HideUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9353,7 +9353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949343d5a0a0bdc49bee95e52457a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cursor: {fileID: 0}
+  m_cursor: {fileID: 1553419534}
 --- !u!1 &799437826
 GameObject:
   m_ObjectHideFlags: 0
@@ -15956,9 +15956,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 313382070}
   - {fileID: 315207373}
   - {fileID: 327731207}
+  - {fileID: 313382070}
   m_Father: {fileID: 2042106058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -24731,7 +24731,7 @@ GameObject:
   - component: {fileID: 2042106055}
   m_Layer: 5
   m_Name: CipherUI
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
