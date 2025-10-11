@@ -1,34 +1,53 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[DisallowMultipleComponent]
 public class InteractableComponentManager : MonoBehaviour
 {
     [Header("Scene Changer")]
-    [SerializeField] private SceneChanger m_sceneChanger;
+    [SerializeField] private UIManager m_sceneChanger;
 
     [Header("Cursor Settings")]
     [SerializeField] private Image m_cursor;
     [SerializeField] private Vector2 m_originalSize;
     [SerializeField] private Vector2 m_hoverSize;
 
-    [Header("Scene")]
-    [SerializeField] private string m_scene;
+    [Header("Interactive")]
+    [SerializeField] private GameObject m_uiToShow;
+
+    private Outline _outline;
+    private InteractableComponentManager _componentManager;
+    private void Start()
+    {
+        _outline = gameObject.GetComponent<Outline>();
+        _componentManager = gameObject.GetComponent<InteractableComponentManager>();
+    }
 
     private void OnMouseEnter()
     {
-        m_cursor.rectTransform.sizeDelta = m_hoverSize;
-        gameObject.GetComponent<Outline>().enabled = true;
+        if (_componentManager.enabled)
+        {
+            m_cursor.rectTransform.sizeDelta = m_hoverSize;
+            _outline.enabled = true;
+        }
     }
 
     private void OnMouseExit()
     {
-        m_cursor.rectTransform.sizeDelta = m_originalSize;
-        gameObject.GetComponent<Outline>().enabled = false;
+        if (_componentManager.enabled)
+        {
+            m_cursor.rectTransform.sizeDelta = m_originalSize;
+            _outline.enabled = false;
+        }
     }
 
     private void OnMouseDown()
     {
-        Cursor.lockState = CursorLockMode.None;
-        m_sceneChanger.ChangeScene(m_scene);
+        if (_componentManager.enabled)
+        {
+            _outline.enabled = false;
+            m_cursor.enabled = false;
+            m_sceneChanger.ShowUI(m_uiToShow);
+        }
     }
 }
