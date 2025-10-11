@@ -24,6 +24,7 @@ public class InteractableComponentManager : MonoBehaviour
     private void Start()
     {
         _outline = gameObject.GetComponent<Outline>();
+        _outline.enabled = false;
         _componentManager = gameObject.GetComponent<InteractableComponentManager>();
     }
 
