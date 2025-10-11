@@ -28,6 +28,7 @@ public class InteractableComponentManager : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Cursor.lockState = CursorLockMode.None;
         m_sceneChanger.ChangeScene(m_scene);
     }
 }

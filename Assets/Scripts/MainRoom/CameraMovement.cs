@@ -15,7 +15,6 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
     }
 
     private void FixedUpdate()
