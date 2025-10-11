@@ -13,7 +13,11 @@ public class InteractableComponentManager : MonoBehaviour
     [SerializeField] private Vector2 m_hoverSize;
 
     [Header("Interactive")]
+    [SerializeField] private bool m_isUI;
     [SerializeField] private GameObject m_uiToShow;
+
+    [SerializeField] private bool m_isNote;
+    [SerializeField] private GameObject m_noteToAdd;
 
     private Outline _outline;
     private InteractableComponentManager _componentManager;
@@ -46,7 +50,9 @@ public class InteractableComponentManager : MonoBehaviour
         if (_componentManager.enabled)
         {
             _outline.enabled = false;
-            m_sceneChanger.ShowUI(m_uiToShow);
+
+            if(m_isUI) m_sceneChanger.ShowUI(m_uiToShow);
+            if(m_isNote) m_noteToAdd.SetActive(true);
         }
     }
 }
