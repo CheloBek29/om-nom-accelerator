@@ -4,8 +4,10 @@ using System.Collections;
 
 public class VisualNovelDialogue : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private float typingSpeed = 0.02f; // секунд на символ
+    [SerializeField] private SceneChanger m_sceneChanger;
+    [SerializeField] private TextMeshProUGUI m_dialogueText;
+    [SerializeField] private float m_typingSpeed = 0.02f; // секунд на символ
+    [SerializeField] private string m_sceneToShowAtTheEnd;
 
     // Текст диалога — каждая строка отдельно
     private string[] lines = new string[]
@@ -38,7 +40,7 @@ public class VisualNovelDialogue : MonoBehaviour
 
     void Start()
     {
-        dialogueText.text = "";
+        m_dialogueText.text = "";
         StartCoroutine(ShowNextLine());
     }
 
@@ -46,7 +48,7 @@ public class VisualNovelDialogue : MonoBehaviour
     {
         if (currentLineIndex >= lines.Length)
         {
-            Debug.Log("Диалог завершён.");
+            m_sceneChanger.ChangeScene(m_sceneToShowAtTheEnd);
             yield break;
         }
 
@@ -54,13 +56,13 @@ public class VisualNovelDialogue : MonoBehaviour
         currentLineIndex++;
 
         isTyping = true;
-        dialogueText.text = "";
+        m_dialogueText.text = "";
 
         // Печатаем текст посимвольно
         for (int i = 0; i < line.Length; i++)
         {
-            dialogueText.text += line[i];
-            yield return new WaitForSeconds(typingSpeed);
+            m_dialogueText.text += line[i];
+            yield return new WaitForSeconds(m_typingSpeed);
 
             // Если нажали ЛКМ или Пробел — пропускаем анимацию
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
@@ -70,7 +72,7 @@ public class VisualNovelDialogue : MonoBehaviour
         }
 
         // Убеждаемся, что весь текст отображён
-        dialogueText.text = line;
+        m_dialogueText.text = line;
         isTyping = false;
 
         // Ждём нажатия ЛКМ или Пробела для перехода к следующей строке
