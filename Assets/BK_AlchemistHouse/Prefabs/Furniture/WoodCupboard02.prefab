@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 65374207182795282}
   - component: {fileID: 65334626739802488}
   - component: {fileID: 65817997269506152}
+  - component: {fileID: 7907793370755328008}
   m_Layer: 0
   m_Name: WoodCupboard02
   m_TagString: Untagged
@@ -238,3 +239,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.864796, y: 0.99143785, z: 0.067854986}
   m_Center: {x: 0.000051078965, y: -0.029609993, z: 3.115742}
+--- !u!65 &7907793370755328008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259995281058250}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.86, y: 0.1, z: 3.1}
+  m_Center: {x: 0, y: 0.42, z: 1.58}
