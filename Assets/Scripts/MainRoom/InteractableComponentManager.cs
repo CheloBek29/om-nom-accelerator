@@ -46,7 +46,6 @@ public class InteractableComponentManager : MonoBehaviour
         if (_componentManager.enabled)
         {
             _outline.enabled = false;
-            m_cursor.enabled = false;
             m_sceneChanger.ShowUI(m_uiToShow);
         }
     }
