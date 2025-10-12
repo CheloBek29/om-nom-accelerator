@@ -1,26 +1,28 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bookmarks : MonoBehaviour
 {
-    [SerializeField] private GameObject currentTab;
-    [SerializeField] private GameObject currentGroup;
+    [SerializeField] private GameObject m_currentTab;
+    [SerializeField] private GameObject m_currentGroup;
+    [SerializeField] private GameObject m_scrollRect;
 
 
     public void ChangeTab(GameObject tab)
     {
-        currentTab.SetActive(false);
-
+        m_currentTab.SetActive(false);
         tab.SetActive(true);
 
-        currentTab = tab;
+        m_currentTab = tab;
+        m_scrollRect.GetComponent<ScrollRect>().content = m_currentTab.GetComponent<RectTransform>();
     }
 
     public void ChangeGroup(GameObject group)
     {
-        currentGroup.SetActive(false);
+        m_currentGroup.SetActive(false);
 
         group.SetActive(true);
 
-        currentGroup = group;
+        m_currentGroup = group;
     }
 }
