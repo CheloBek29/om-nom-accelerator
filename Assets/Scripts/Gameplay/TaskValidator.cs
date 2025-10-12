@@ -20,14 +20,8 @@ public class TaskValidator : MonoBehaviour
             m_nextTask.SetActive(true);
             if (m_needPopUp)
             {
-                m_uiManager.ShowPopUp(m_popUpText);
-                m_popUpTrigger.ActivateTutorialHint();
+                m_uiManager.StartTutorial(m_popUpText, m_popUpTrigger);
             }
         }
-    }
-
-    public void OnPopUpTriggered()
-    {
-        m_uiManager.HidePopUp();
     }
 }

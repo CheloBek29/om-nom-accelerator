@@ -5822,46 +5822,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341559983}
   m_CullTransparentMesh: 1
---- !u!114 &349916731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349916725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_correctAnswer: "\u043F\u0440\u0438\u0432\u0435\u0442 \u043C\u0438\u0440"
-  m_nextTask: {fileID: 581033262}
---- !u!1 &355791089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 343574002}
-  - component: {fileID: 343574001}
-  - component: {fileID: 343574000}
-  - component: {fileID: 343573999}
-  m_Layer: 5
-  m_Name: Scroll View
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &343573999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343573998}
+  m_GameObject: {fileID: 355791089}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
@@ -5891,7 +5858,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343573998}
+  m_GameObject: {fileID: 355791089}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -5921,7 +5888,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343573998}
+  m_GameObject: {fileID: 355791089}
   m_CullTransparentMesh: 1
 --- !u!224 &343574002
 RectTransform:
@@ -5929,7 +5896,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343573998}
+  m_GameObject: {fileID: 355791089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -6022,6 +5989,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 347464288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &355791089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 343574002}
+  - component: {fileID: 343574001}
+  - component: {fileID: 343574000}
+  - component: {fileID: 343573999}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &362229057
 GameObject:
   m_ObjectHideFlags: 0
@@ -7128,7 +7114,7 @@ MonoBehaviour:
   m_text: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 343cfc46ed27bca42bf38d3bf3f5d280, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4040458779994113669, guid: 343cfc46ed27bca42bf38d3bf3f5d280, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7191,7 +7177,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &411220021
@@ -12968,8 +12954,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1762944328}
+  m_Children: []
   m_Father: {fileID: 1024546610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -16858,7 +16843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 1762944328}
+  m_Content: {fileID: 0}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
@@ -19739,7 +19724,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 411220019}
-  m_Father: {fileID: 1762944328}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -21400,8 +21385,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_uiManager: {fileID: 799269210}
   m_correctAnswer: "\u043F\u0440\u0438\u0432\u0435\u0442 \u043C\u0438\u0440"
   m_nextTask: {fileID: 1246581943}
+  m_needPopUp: 1
+  m_popUpText: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439 \u043A\u043D\u0438\u0436\u043D\u044B\u0439
+    \u0448\u043A\u0430\u0444, \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C
+    \u043E \u043D\u043E\u0432\u043E\u043C \u0448\u0438\u0444\u0440\u0435"
+  m_popUpTrigger: {fileID: 1754624702}
 --- !u!114 &1270355722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21838,12 +21829,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnHovered:
+    m_PersistentCalls:
+      m_Calls: []
   m_sceneChanger: {fileID: 799269210}
   m_cursor: {fileID: 1553419534}
   m_originalSize: {x: 15, y: 15}
   m_hoverSize: {x: 20, y: 20}
   m_isUI: 1
-  m_uiToShow: {fileID: 0}
+  m_uiToShow: {fileID: 1215657761}
   m_isNote: 0
   m_noteToAdd: {fileID: 0}
   m_isTutorial: 1
@@ -22643,20 +22637,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324927419}
   m_CullTransparentMesh: 1
---- !u!114 &1325148212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325148206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_correctAnswer: "\u0443\u043B\u0438\u0446\u0430 \u043B\u0435\u0441\u043D\u0430\u044F"
-  m_nextTask: {fileID: 802643877}
 --- !u!1001 &1326907179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25109,7 +25089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_currentTab: {fileID: 104897032}
   m_currentGroup: {fileID: 1453273815}
-  m_scrollRect: {fileID: 343573998}
+  m_scrollRect: {fileID: 355791089}
 --- !u!1001 &1436937342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25292,6 +25272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnHovered:
+    m_PersistentCalls:
+      m_Calls: []
   m_sceneChanger: {fileID: 799269210}
   m_cursor: {fileID: 1553419534}
   m_originalSize: {x: 15, y: 15}
@@ -30064,6 +30047,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnHovered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 799269210}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: HidePopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_sceneChanger: {fileID: 799269210}
   m_cursor: {fileID: 1553419534}
   m_originalSize: {x: 15, y: 15}
@@ -30071,9 +30069,9 @@ MonoBehaviour:
   m_isUI: 1
   m_uiToShow: {fileID: 1215657761}
   m_isNote: 1
-  m_noteToAdd: {fileID: 1101371007}
+  m_noteToAdd: {fileID: 949541272}
   m_isTutorial: 0
-  m_tutorialPopup: {fileID: 0}
+  m_tutorialPopup: {fileID: 362229057}
 --- !u!1001 &1775839207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30657,6 +30655,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 799269206}
+        m_TargetAssemblyTypeName: Bookmarks, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1822397916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30957,8 +30967,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_uiManager: {fileID: 0}
   m_correctAnswer: "\u0443\u043B\u0438\u0446\u0430 \u043B\u0435\u0441\u043D\u0430\u044F"
   m_nextTask: {fileID: 270912412}
+  m_needPopUp: 0
+  m_popUpText: 
+  m_popUpTrigger: {fileID: 0}
 --- !u!114 &1849779051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55879,3 +55893,4 @@ SceneRoots:
   - {fileID: 393994249}
   - {fileID: 799269208}
   - {fileID: 431290952}
+  - {fileID: 1199425515}

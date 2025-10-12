@@ -57,4 +57,10 @@ public class UIManager : MonoBehaviour
     {
         m_popUp.SetActive(false);
     }
+
+    public void StartTutorial(string popUpText, InteractableComponentManager popUpTrigger)
+    {
+        ShowPopUp(popUpText);
+        popUpTrigger.ActivateTutorialHint();
+    }
 }
