@@ -19,12 +19,17 @@ public class InteractableComponentManager : MonoBehaviour
     [SerializeField] private bool m_isNote;
     [SerializeField] private GameObject m_noteToAdd;
 
+    [Header("Tutorial Settings")]
+    [SerializeField] private bool m_isTutorial;
+    [SerializeField] private GameObject m_tutorialPopup;
+
     private Outline _outline;
     private InteractableComponentManager _componentManager;
     private void Start()
     {
         _outline = gameObject.GetComponent<Outline>();
-        _outline.enabled = false;
+        _outline.enabled = m_isTutorial;
+        if (m_isTutorial) _outline.OutlineWidth = 10;
         _componentManager = gameObject.GetComponent<InteractableComponentManager>();
     }
 
@@ -32,6 +37,12 @@ public class InteractableComponentManager : MonoBehaviour
     {
         if (_componentManager.enabled)
         {
+            if(m_isTutorial)
+            {
+                _outline.OutlineWidth = 4;
+                m_isTutorial = false;
+                m_tutorialPopup.SetActive(false);
+            }
             m_cursor.rectTransform.sizeDelta = m_hoverSize;
             _outline.enabled = true;
         }
