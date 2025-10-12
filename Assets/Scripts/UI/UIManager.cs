@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Image m_cursor;
+    [SerializeField] private GameObject m_popUp;
+    [SerializeField] private TMP_Text m_popUpText;
 
     private Camera _camera;
 
@@ -42,5 +45,16 @@ public class UIManager : MonoBehaviour
         }
 
         m_cursor.enabled = true;
+    }
+
+    public void ShowPopUp(string text)
+    {
+        m_popUp.SetActive(true);
+        m_popUpText.text = text;
+    }
+
+    public void HidePopUp()
+    {
+        m_popUp.SetActive(false);
     }
 }

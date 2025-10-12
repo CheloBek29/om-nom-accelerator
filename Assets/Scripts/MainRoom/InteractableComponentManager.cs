@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 public class InteractableComponentManager : MonoBehaviour
 {
+    public UnityEvent OnHovered;
+
     [Header("Scene Changer")]
     [SerializeField] private UIManager m_sceneChanger;
 
@@ -33,15 +36,21 @@ public class InteractableComponentManager : MonoBehaviour
         _componentManager = gameObject.GetComponent<InteractableComponentManager>();
     }
 
+    public void ActivateTutorialHint()
+    {
+        m_isTutorial = true;
+    }
+
     private void OnMouseEnter()
     {
         if (_componentManager.enabled)
         {
-            if(m_isTutorial)
+            if (m_isTutorial)
             {
                 _outline.OutlineWidth = 4;
                 m_isTutorial = false;
-                m_tutorialPopup.SetActive(false);
+                m_sceneChanger.HidePopUp();
+                OnHovered.Invoke();
             }
             m_cursor.rectTransform.sizeDelta = m_hoverSize;
             _outline.enabled = true;
