@@ -53,14 +53,9 @@ public class Caesar : MonoBehaviour
         string cypherRes = "";
         foreach (char c in cypherText)
         {
-            if(_alphabet.Contains(c))
-            {
-                int resIndex = (_alphabetDict[c] - shift + 33) % 33;
-                char resLetter = _alphabetDict.FirstOrDefault(x => x.Value == resIndex).Key;
-                cypherRes += resLetter;
-            }
-
-            else cypherRes += " ";
+            int resIndex = (_alphabetDict[c] - shift + 33) % 33;
+            char resLetter = _alphabetDict.FirstOrDefault(x => x.Value == resIndex).Key;
+            cypherRes += resLetter;
         }
         return cypherRes;
     }
