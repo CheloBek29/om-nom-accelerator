@@ -61,13 +61,24 @@ public class Vigenere : MonoBehaviour
 
     public void Decrypt()
     {
-        string key = getResKey(m_cypherKey.text, m_cypherText.text.Length).ToLower();
         string encryptedText = m_cypherText.text.ToLower();
+        string encTextWithoutSpaces = encryptedText.Replace(" ", "");
+        string key = getResKey(m_cypherKey.text, encTextWithoutSpaces.Length).ToLower();
         string res = "";
-        for (int i = 0; i < key.Length; i++)
+        int delta = 0;
+        int id = 0;
+        for (int i = 0; i - delta < key.Length; i++)
         {
-            int keyLetId = _alphabetDict[key[i]];
-            int encLetId = _alphabetDict[encryptedText[i]];
+            id = i - delta;
+            if (encryptedText[i] == ' ')
+            { 
+                res += " ";
+                delta++;
+                continue; 
+            }
+
+            int keyLetId = _alphabetDict[key[id]];
+            int encLetId = _alphabetDict[encTextWithoutSpaces[id]];
             int decLetId = (encLetId - keyLetId + 33) % 33;
             char resLet = _alphabet[decLetId];
             res += resLet;
