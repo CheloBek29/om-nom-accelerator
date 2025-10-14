@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartNovel.unity
     guid: bafb5534ed81f424a834e93c295e0372
   - enabled: 1
-    path: Assets/Scenes/MainRoom.unity
+    path: Assets/Scenes/Room/MainRoom.unity
     guid: ad28573dcbf9a4518a6e64100a197dda
   - enabled: 0
     path: Assets/Scenes/ExampleScene.unity
