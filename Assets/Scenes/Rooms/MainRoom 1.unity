@@ -607,11 +607,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2158000f31a48dc8dddb1d22d132ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
+  m_uiManager: {fileID: 0}
   m_tutorialText: "\u041F\u043E\u0434\u043E\u0439\u0434\u0438 \u043A \u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u044E,
     \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C
     \u043F\u0435\u0440\u0432\u043E\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
-  m_triggerComponent: {fileID: 1438610143}
+  m_triggerComponent: {fileID: 0}
   m_isGlobal: 0
 --- !u!1 &63157673
 GameObject:
@@ -6178,7 +6178,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 799269210}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: HideUI
         m_Mode: 1
@@ -6419,7 +6419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748052576888666, guid: c5c372c1214e3794597498187eadb8fd, type: 3}
       propertyPath: m_TagString
-      value: Interactable
+      value: MainBook
       objectReference: {fileID: 0}
     - target: {fileID: 4008716629716394, guid: c5c372c1214e3794597498187eadb8fd, type: 3}
       propertyPath: m_LocalScale.x
@@ -12218,7 +12218,6 @@ GameObject:
   - component: {fileID: 799269208}
   - component: {fileID: 799269209}
   - component: {fileID: 799269210}
-  - component: {fileID: 799269211}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -12265,25 +12264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949343d5a0a0bdc49bee95e52457a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cursor: {fileID: 1553419534}
-  m_popUp: {fileID: 362229057}
-  m_popUpText: {fileID: 1197608717}
---- !u!114 &799269211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799269206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2158000f31a48dc8dddb1d22d132ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_tutorialText: 
-  m_triggerComponent: {fileID: 0}
-  m_isGlobal: 1
+  m_popUp: {fileID: 0}
+  m_popUpText: {fileID: 0}
 --- !u!1 &799437826
 GameObject:
   m_ObjectHideFlags: 0
@@ -14046,7 +14028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
+  m_uiManager: {fileID: 0}
   m_correctAnswer: "\u0441\u043F\u0430\u0441\u0438\u0431\u043E \u0442\u0435\u0431\u0435"
   m_nextTask: {fileID: 1344597068}
   m_needPopUp: 0
@@ -17204,7 +17186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 799269210}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: HideUI
         m_Mode: 1
@@ -17216,7 +17198,7 @@ MonoBehaviour:
           m_StringArgument: MainRoom
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 799269210}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowUI
         m_Mode: 2
@@ -22280,7 +22262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
+  m_uiManager: {fileID: 0}
   m_correctAnswer: "\u043F\u0440\u0438\u0432\u0435\u0442 \u043C\u0438\u0440"
   m_nextTask: {fileID: 1246581943}
   m_needPopUp: 1
@@ -22652,22 +22634,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278090953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 372a45ea53c8249e18cceb1811eb07b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
+  OnHoveredQuest:
     m_PersistentCalls:
       m_Calls: []
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1215657761}
-  m_isNote: 0
-  m_noteToAdd: {fileID: 0}
-  m_isTutorial: 1
-  m_tutorialPopup: {fileID: 362229057}
+  OnHoverEndedQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickedQuest:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1281762953
 GameObject:
   m_ObjectHideFlags: 0
@@ -26090,7 +26068,6 @@ GameObject:
   - component: {fileID: 1438610138}
   - component: {fileID: 1438610141}
   - component: {fileID: 1438610140}
-  - component: {fileID: 1438610143}
   - component: {fileID: 1438610142}
   - component: {fileID: 1438610144}
   m_Layer: 0
@@ -26183,43 +26160,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1438610143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438610137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799269211}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: OnTutorialTriggered
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1502811859}
-  m_isNote: 1
-  m_noteToAdd: {fileID: 1744873985}
-  m_isTutorial: 0
-  m_tutorialPopup: {fileID: 0}
 --- !u!65 &1438610144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26318,6 +26258,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4006225117985208, guid: fdb7d0167c2048440bfb09e723e7e2a1, type: 3}
   m_PrefabInstance: {fileID: 1439438487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1440394220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440394222}
+  - component: {fileID: 1440394221}
+  m_Layer: 0
+  m_Name: InteractableComponentManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1440394221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440394220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3550afc51ec42a18416a307893e94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainUI: {fileID: 1215657761}
+--- !u!4 &1440394222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440394220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.295439, y: 0.6360135, z: 2.2799227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1443553146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30476,31 +30461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799269210}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: HidePopUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1215657761}
-  m_isNote: 1
-  m_noteToAdd: {fileID: 949541272}
-  m_isTutorial: 0
-  m_tutorialPopup: {fileID: 362229057}
 --- !u!1001 &1775839207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33692,6 +33652,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4844268320110476, guid: b324f35bcc808f04d91168616dd3434d, type: 3}
   m_PrefabInstance: {fileID: 1957764339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1966184931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966184933}
+  - component: {fileID: 1966184932}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1966184932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966184931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8d5e602f7c14719868ed55615afc02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cursor: {fileID: 1553419534}
+  m_originalSize: {x: 20, y: 20}
+  m_hoverSize: {x: 40, y: 40}
+--- !u!4 &1966184933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966184931}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.295439, y: 0.6360135, z: 2.2799227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1970780378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51943,3 +51950,5 @@ SceneRoots:
   - {fileID: 799269208}
   - {fileID: 431290952}
   - {fileID: 1238506385}
+  - {fileID: 1966184933}
+  - {fileID: 1440394222}

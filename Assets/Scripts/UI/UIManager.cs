@@ -1,10 +1,12 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Image m_cursor;
+    public UnityEvent OnUIOpened;
+    public UnityEvent OnUIClosed;
+
     [SerializeField] private GameObject m_popUp;
     [SerializeField] private TMP_Text m_popUpText;
 
@@ -21,10 +23,9 @@ public class UIManager : MonoBehaviour
         {
             el.enabled = false;
         }
-        Cursor.lockState = CursorLockMode.None;
         _camera.GetComponent<CameraMovement>().enabled = false;
-        m_cursor.enabled = false;
         ui.SetActive(true);
+        OnUIOpened.Invoke();
     }
 
     public void HideUI()
@@ -34,8 +35,7 @@ public class UIManager : MonoBehaviour
         {
             ui.SetActive(false);
         }
-
-        Cursor.lockState = CursorLockMode.Locked;
+        OnUIClosed.Invoke();
         _camera.GetComponent<CameraMovement>().enabled = true;
 
         InteractableComponentManager[] interactable = FindObjectsOfType<InteractableComponentManager>();
@@ -43,8 +43,6 @@ public class UIManager : MonoBehaviour
         {
             el.enabled = true;
         }
-
-        m_cursor.enabled = true;
     }
 
     public void ShowPopUp(string text)
@@ -56,11 +54,5 @@ public class UIManager : MonoBehaviour
     public void HidePopUp()
     {
         m_popUp.SetActive(false);
-    }
-
-    public void StartTutorial(string popUpText, InteractableComponentManager popUpTrigger)
-    {
-        ShowPopUp(popUpText);
-        popUpTrigger.ActivateTutorialHint();
     }
 }
