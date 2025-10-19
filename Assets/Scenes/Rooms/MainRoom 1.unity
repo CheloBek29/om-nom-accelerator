@@ -448,7 +448,6 @@ GameObject:
   - component: {fileID: 49170117}
   - component: {fileID: 49170116}
   - component: {fileID: 49170115}
-  - component: {fileID: 49170118}
   m_Layer: 5
   m_Name: NotebookBtn
   m_TagString: Untagged
@@ -545,7 +544,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 49170118}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
         m_MethodName: OnClicked
         m_Mode: 1
@@ -595,24 +594,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49170113}
   m_CullTransparentMesh: 1
---- !u!114 &49170118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49170113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2158000f31a48dc8dddb1d22d132ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 0}
-  m_tutorialText: "\u041F\u043E\u0434\u043E\u0439\u0434\u0438 \u043A \u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u044E,
-    \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C
-    \u043F\u0435\u0440\u0432\u043E\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
-  m_triggerComponent: {fileID: 0}
-  m_isGlobal: 0
 --- !u!1 &63157673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,7 +5771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &362229058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6178,7 +6159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 799269210}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: HideUI
         m_Mode: 1
@@ -6419,7 +6400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748052576888666, guid: c5c372c1214e3794597498187eadb8fd, type: 3}
       propertyPath: m_TagString
-      value: MainBook
+      value: MainObject
       objectReference: {fileID: 0}
     - target: {fileID: 4008716629716394, guid: c5c372c1214e3794597498187eadb8fd, type: 3}
       propertyPath: m_LocalScale.x
@@ -8107,6 +8088,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512813582}
   m_CullTransparentMesh: 1
+--- !u!1 &519438916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519438918}
+  - component: {fileID: 519438917}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &519438917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519438916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc9993db6d314c92ad33177eb6a7f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_quests:
+  - _endTrigger: {fileID: 1278090953}
+    _questText: "\u0422\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438
+      \u0434\u043D\u0435\u0432\u043D\u0438\u043A \u042D\u043B\u0438\u0430\u043D\u044B"
+    _noteToAdd: {fileID: 0}
+--- !u!4 &519438918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519438916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.295439, y: 0.6360135, z: 2.2799227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523330343
 GameObject:
   m_ObjectHideFlags: 0
@@ -12264,8 +12294,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949343d5a0a0bdc49bee95e52457a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_popUp: {fileID: 0}
-  m_popUpText: {fileID: 0}
+  OnUIOpened:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1966184932}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: UnlockCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUIClosed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1966184932}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: LockCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_popUp: {fileID: 362229057}
+  m_popUpText: {fileID: 1197608717}
 --- !u!1 &799437826
 GameObject:
   m_ObjectHideFlags: 0
@@ -16860,7 +16920,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1270355721}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskValidator, Assembly-CSharp
         m_MethodName: checkValue
         m_Mode: 2
@@ -19059,7 +19119,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -33.910004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197608716
 MonoBehaviour:
@@ -22242,7 +22302,6 @@ GameObject:
   - component: {fileID: 1270355724}
   - component: {fileID: 1270355723}
   - component: {fileID: 1270355722}
-  - component: {fileID: 1270355721}
   m_Layer: 5
   m_Name: Task1
   m_TagString: Untagged
@@ -22250,26 +22309,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1270355721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270355720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 0}
-  m_correctAnswer: "\u043F\u0440\u0438\u0432\u0435\u0442 \u043C\u0438\u0440"
-  m_nextTask: {fileID: 1246581943}
-  m_needPopUp: 1
-  m_popUpText: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439 \u043A\u043D\u0438\u0436\u043D\u044B\u0439
-    \u0448\u043A\u0430\u0444, \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C
-    \u043E \u043D\u043E\u0432\u043E\u043C \u0448\u0438\u0444\u0440\u0435"
-  m_popUpTrigger: {fileID: 1754624702}
 --- !u!114 &1270355722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22646,6 +22685,7 @@ MonoBehaviour:
   OnClickedQuest:
     m_PersistentCalls:
       m_Calls: []
+  uiToShow: {fileID: 0}
 --- !u!1 &1281762953
 GameObject:
   m_ObjectHideFlags: 0
@@ -26068,6 +26108,7 @@ GameObject:
   - component: {fileID: 1438610138}
   - component: {fileID: 1438610141}
   - component: {fileID: 1438610140}
+  - component: {fileID: 1438610145}
   - component: {fileID: 1438610142}
   - component: {fileID: 1438610144}
   m_Layer: 0
@@ -26181,6 +26222,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 1, z: 2.6847043}
   m_Center: {x: 3.168204e-16, y: 0, z: 0.3423524}
+--- !u!114 &1438610145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438610137}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372a45ea53c8249e18cceb1811eb07b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHoveredQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHoverEndedQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickedQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  uiToShow: {fileID: 1502811859}
 --- !u!1001 &1439438487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26287,7 +26350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3550afc51ec42a18416a307893e94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainUI: {fileID: 1215657761}
+  _defaultUI: {fileID: 1215657761}
 --- !u!4 &1440394222
 Transform:
   m_ObjectHideFlags: 0
@@ -28927,6 +28990,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4057908672837446, guid: 5b9389545005b8245bd30314aa7807c6, type: 3}
   m_PrefabInstance: {fileID: 1645785856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661029402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661029404}
+  - component: {fileID: 1661029403}
+  m_Layer: 0
+  m_Name: TaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1661029403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661029402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8abaa99cf706c41b3b151a6b5cf0d767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_tasks: []
+--- !u!4 &1661029404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661029402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.295439, y: 0.6360135, z: 2.2799227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668494725
 GameObject:
   m_ObjectHideFlags: 0
@@ -30456,11 +30564,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754624699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 372a45ea53c8249e18cceb1811eb07b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnHoveredQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHoverEndedQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickedQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  uiToShow: {fileID: 0}
 --- !u!1001 &1775839207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51952,3 +52070,5 @@ SceneRoots:
   - {fileID: 1238506385}
   - {fileID: 1966184933}
   - {fileID: 1440394222}
+  - {fileID: 519438918}
+  - {fileID: 1661029404}
