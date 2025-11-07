@@ -14,6 +14,11 @@ public class TaskManager : MonoBehaviour
         _questManager = FindObjectOfType<QuestManager>();
     }
 
+    private void Start()
+    {
+        StartTask();
+    }
+
     public void StartTask()
     {
         if (_currentTask < m_tasks.Count)
@@ -31,7 +36,8 @@ public class TaskManager : MonoBehaviour
             if (task._isStartingQuest)
                 _questManager.StartQuest();
             _currentTask++;
-            StartTask();
+            if (task._isStartingNextTask)
+                StartTask();
         }
     }
 }

@@ -6,11 +6,12 @@ public class Task
 {
     public GameObject _taskUI;
     public bool _isStartingQuest;
+    public bool _isStartingNextTask;
 
-    private string _correctAnswer;
+    [SerializeField] private string _correctAnswer;
 
     public bool CheckAnswer(string answer)
     {
-        return answer == _correctAnswer;
+        return answer.Substring(0, answer.Length - 1).Equals(_correctAnswer, StringComparison.OrdinalIgnoreCase) || answer.Equals(_correctAnswer, StringComparison.OrdinalIgnoreCase);
     }
 }

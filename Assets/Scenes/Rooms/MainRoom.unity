@@ -1395,12 +1395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2158000f31a48dc8dddb1d22d132ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_tutorialText: "\u041F\u043E\u0434\u043E\u0439\u0434\u0438 \u043A \u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u044E,
-    \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C
-    \u043F\u0435\u0440\u0432\u043E\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
-  m_triggerComponent: {fileID: 1438610143}
-  m_isGlobal: 0
 --- !u!1 &51303415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,13 +3753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_correctAnswer: "\u0434\u043E\u043C \u043F\u043E\u043C\u043D\u0438\u0442 \u0432\u0441\u0451
-    \u0436\u0434\u0438"
-  m_nextTask: {fileID: 697664469}
-  m_needPopUp: 0
-  m_popUpText: 
-  m_popUpTrigger: {fileID: 0}
 --- !u!1 &141637963
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,7 +6800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &277763371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11286,7 +11273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &431290951
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22298,7 +22285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949343d5a0a0bdc49bee95e52457a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cursor: {fileID: 1553419534}
+  OnUIOpened:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUIClosed:
+    m_PersistentCalls:
+      m_Calls: []
   m_popUp: {fileID: 362229057}
   m_popUpText: {fileID: 1197608717}
 --- !u!114 &799269211
@@ -22313,10 +22305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2158000f31a48dc8dddb1d22d132ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_tutorialText: 
-  m_triggerComponent: {fileID: 0}
-  m_isGlobal: 1
 --- !u!4 &807997346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520572548859558, guid: 4d1cebdc049362f46a8c7ade7cd87b59, type: 3}
@@ -24249,15 +24237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_correctAnswer: "\u0441\u043F\u0430\u0441\u0438\u0431\u043E \u0442\u0435\u0431\u0435"
-  m_nextTask: {fileID: 1344597068}
-  m_needPopUp: 1
-  m_popUpText: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E, \u0432\u0430\u043C
-    \u0441\u0442\u043E\u0438\u0442 \u043E\u0431\u0440\u0430\u0442\u0438\u0442\u044C
-    \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u043A\u043D\u0438\u0433\u0438
-    \u0432 \u0434\u043E\u043C\u0435"
-  m_popUpTrigger: {fileID: 1524430452}
 --- !u!1 &881884312
 GameObject:
   m_ObjectHideFlags: 0
@@ -32502,7 +32481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1238480751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34918,14 +34897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 799269210}
-  m_correctAnswer: "\u043F\u0440\u0438\u0432\u0435\u0442 \u043C\u0438\u0440"
-  m_nextTask: {fileID: 1246581943}
-  m_needPopUp: 1
-  m_popUpText: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439 \u043A\u043D\u0438\u0436\u043D\u044B\u0439
-    \u0448\u043A\u0430\u0444, \u0447\u0442\u043E\u0431\u044B \u0443\u0437\u043D\u0430\u0442\u044C
-    \u043E \u043D\u043E\u0432\u043E\u043C \u0448\u0438\u0444\u0440\u0435"
-  m_popUpTrigger: {fileID: 1754624702}
 --- !u!114 &1270355722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35227,19 +35198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1215657761}
-  m_isNote: 0
-  m_noteToAdd: {fileID: 0}
-  m_isTutorial: 1
-  m_tutorialPopup: {fileID: 362229057}
 --- !u!4 &1280818511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4442502131116386, guid: 791aea7a92405b14ba8d1cb4136723de, type: 3}
@@ -39822,31 +39780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799269211}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: OnTutorialTriggered
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1502811859}
-  m_isNote: 1
-  m_noteToAdd: {fileID: 1744873985}
-  m_isTutorial: 0
-  m_tutorialPopup: {fileID: 0}
 --- !u!65 &1438610144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41606,19 +41539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1376821418}
-  m_isNote: 0
-  m_noteToAdd: {fileID: 949541272}
-  m_isTutorial: 0
-  m_tutorialPopup: {fileID: 362229057}
 --- !u!1 &1525581119
 GameObject:
   m_ObjectHideFlags: 0
@@ -47733,31 +47653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eaec199a9b4f709eb934c03f974a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHovered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799269210}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: HidePopUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_sceneChanger: {fileID: 799269210}
-  m_cursor: {fileID: 1553419534}
-  m_originalSize: {x: 15, y: 15}
-  m_hoverSize: {x: 20, y: 20}
-  m_isUI: 1
-  m_uiToShow: {fileID: 1215657761}
-  m_isNote: 1
-  m_noteToAdd: {fileID: 949541272}
-  m_isTutorial: 0
-  m_tutorialPopup: {fileID: 362229057}
 --- !u!1 &1759230067
 GameObject:
   m_ObjectHideFlags: 0
@@ -49134,12 +49029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57574b778b2aca34fb78042284e3db95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiManager: {fileID: 0}
-  m_correctAnswer: "\u0443\u043B\u0438\u0446\u0430 \u043B\u0435\u0441\u043D\u0430\u044F"
-  m_nextTask: {fileID: 270912412}
-  m_needPopUp: 0
-  m_popUpText: 
-  m_popUpTrigger: {fileID: 0}
 --- !u!114 &1849779051
 MonoBehaviour:
   m_ObjectHideFlags: 0

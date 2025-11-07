@@ -20,8 +20,14 @@ public class InteractableComponentManager : MonoBehaviour
         _questManager = FindObjectOfType<QuestManager>();
         _interactableObjects.AddRange(FindObjectsOfType<InteractableObject>());
         _mainObjects.AddRange(InteractableObject.FindInteractableObjectsWithTag("MainObject"));
+    }
 
+    private void Start()
+    {
         _interactableObjects.ForEach(i => AddListeners(i));
+
+        _uiManager.OnUIOpened.AddListener(DisableAllInteractables);
+        _uiManager.OnUIClosed.AddListener(EnableAllInteractables);
     }
 
     private void AddListeners(InteractableObject item)
@@ -50,21 +56,33 @@ public class InteractableComponentManager : MonoBehaviour
     public void ActivateInteractable(GameObject obj)
     {
         InteractableObject component = obj.GetComponent<InteractableObject>();
-        if (component && !_mainObjects.Contains(component))
-        {
+        component.enabled = true;
+        if (!_interactableObjects.Contains(component))
             _interactableObjects.Add(component);
-            AddListeners(component);
-            component.enabled = true;
-        }
     }
 
     public void DeactivateInteractable(InteractableObject obj)
     {
         if (!_mainObjects.Contains(obj))
         {
-            _interactableObjects.Remove(obj);
-            RemoveListeners(obj);
             obj.enabled = false;
+            _interactableObjects.Remove(obj);
+        }
+    }
+
+    private void EnableAllInteractables()
+    {
+        foreach (var item in _interactableObjects)
+        {
+            item.enabled = true;
+        }
+    }
+
+    private void DisableAllInteractables()
+    {
+        foreach (var item in _interactableObjects)
+        {
+            item.enabled = false;
         }
     }
 }

@@ -13,29 +13,39 @@ public class InteractableObject : MonoBehaviour
     [Tooltip("Необязательное поле, если не указано открывается UI по умолчанию - дневник")]
     public GameObject uiToShow;
 
+    [SerializeField] private bool m_isInitiallyActive = true;
+
     private Outline _outline;
 
     private void Start()
     {
         _outline = GetComponent<Outline>();
         _outline.enabled = false;
+        enabled = m_isInitiallyActive;
     }
 
     private void OnMouseEnter()
     {
-        _outline.enabled = true;
-        OnHoveredQuest.Invoke();
+        if (enabled)
+        {
+            _outline.enabled = true;
+            OnHoveredQuest.Invoke();
+        } 
     }
 
     private void OnMouseExit()
     {
-        _outline.enabled = false;
-        OnHoverEndedQuest.Invoke();
+        if (enabled)
+        {
+            _outline.enabled = false;
+            OnHoverEndedQuest.Invoke();
+        }
     }
 
     private void OnMouseDown()
     {
-        OnClickedQuest.Invoke();
+        if (enabled)
+            OnClickedQuest.Invoke();
     }
 
     private void OnDisable()

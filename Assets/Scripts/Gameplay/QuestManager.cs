@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour
     private UIManager _uiManager;
     private NotebookManager _notebookManager;
     private InteractableComponentManager _iManager;
-
+    private TaskManager _taskManager;
     private int _activeQuest = 0;
     private bool _isQuestActive = false;
 
@@ -16,6 +16,7 @@ public class QuestManager : MonoBehaviour
         _uiManager = FindObjectOfType<UIManager>();
         _notebookManager = FindObjectOfType<NotebookManager>();
         _iManager = FindAnyObjectByType<InteractableComponentManager>();
+        _taskManager = FindObjectOfType<TaskManager>();
     }
 
     private void Start()
@@ -42,9 +43,13 @@ public class QuestManager : MonoBehaviour
             if (quest._endTrigger == trigger)
             {
                 if (quest._noteToAdd)
+                {
                     _notebookManager.AddNote(quest._noteToAdd);
+                }
                 _uiManager.HidePopUp();
                 _iManager.DeactivateInteractable(quest._endTrigger.GetComponent<InteractableObject>());
+                if (quest._isStartingTask)
+                    _taskManager.StartTask();
                 _activeQuest++;
                 _isQuestActive = false;
             }
