@@ -27,6 +27,7 @@ public class NbManager : MonoBehaviour
 
     public void ChangeTab(GameObject tab)
     {
+        CloseNote();
         m_currentTab.SetActive(false);
         m_currentContentTable = tab.GetComponent<TabManager>().GetContentTable();
 

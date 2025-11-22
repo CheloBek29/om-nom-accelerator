@@ -13,7 +13,7 @@ public class InteractableObject : MonoBehaviour
     [Tooltip("Необязательное поле, если не указано открывается UI по умолчанию - дневник")]
     public GameObject uiToShow;
 
-    [SerializeField] private bool m_isInitiallyActive = true;
+    public bool m_isInitiallyActive = true;
 
     private Outline _outline;
 

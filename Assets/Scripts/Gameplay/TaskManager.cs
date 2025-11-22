@@ -16,7 +16,7 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
-        StartTask();
+        //StartTask();
     }
 
     public void StartTask()

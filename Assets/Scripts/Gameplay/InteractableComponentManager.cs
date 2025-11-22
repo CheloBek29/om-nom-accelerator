@@ -18,7 +18,14 @@ public class InteractableComponentManager : MonoBehaviour
         _cursorManager = FindObjectOfType<CursorManager>();
         _uiManager = FindObjectOfType<UIManager>();
         _questManager = FindObjectOfType<QuestManager>();
-        _interactableObjects.AddRange(FindObjectsOfType<InteractableObject>());
+
+        InteractableObject[] objects = FindObjectsOfType<InteractableObject>();
+        foreach (var item in objects)
+        {
+            if (item.m_isInitiallyActive)
+                _interactableObjects.Add(item);
+        }
+
         _mainObjects.AddRange(InteractableObject.FindInteractableObjectsWithTag("MainObject"));
     }
 
@@ -56,18 +63,17 @@ public class InteractableComponentManager : MonoBehaviour
     public void ActivateInteractable(GameObject obj)
     {
         InteractableObject component = obj.GetComponent<InteractableObject>();
+        _interactableObjects.Add(component);
         component.enabled = true;
-        if (!_interactableObjects.Contains(component))
-            _interactableObjects.Add(component);
+        AddListeners(component);
     }
 
     public void DeactivateInteractable(InteractableObject obj)
     {
-        if (!_mainObjects.Contains(obj))
-        {
-            obj.enabled = false;
+        RemoveListeners(obj);
+        obj.enabled = false;
+        if (!obj.m_isInitiallyActive)
             _interactableObjects.Remove(obj);
-        }
     }
 
     private void EnableAllInteractables()
@@ -75,6 +81,7 @@ public class InteractableComponentManager : MonoBehaviour
         foreach (var item in _interactableObjects)
         {
             item.enabled = true;
+            AddListeners(item);
         }
     }
 
@@ -83,6 +90,7 @@ public class InteractableComponentManager : MonoBehaviour
         foreach (var item in _interactableObjects)
         {
             item.enabled = false;
+            RemoveListeners(item);
         }
     }
 }

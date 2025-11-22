@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
     value: 0.75
   contrast:
     overrideState: 0
-    value: 0
+    value: 3
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -257,10 +257,10 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.90326405, y: 0.88016623, z: 1, w: 0}
+    value: {x: 0.91238433, y: 0.9485731, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.9111793, z: 0.9192329, w: 0}
+    value: {x: 1, y: 0.91988957, z: 0.9239121, w: 0}
   gain:
     overrideState: 1
     value: {x: 1, y: 0.84861064, z: 0.79983413, w: 0}
