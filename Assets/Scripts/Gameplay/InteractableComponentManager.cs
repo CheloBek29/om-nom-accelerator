@@ -62,10 +62,11 @@ public class InteractableComponentManager : MonoBehaviour
 
     public void ActivateInteractable(GameObject obj)
     {
-        InteractableObject component = obj.GetComponent<InteractableObject>();
-        _interactableObjects.Add(component);
-        component.enabled = true;
-        AddListeners(component);
+        if (obj && obj.TryGetComponent<InteractableObject>(out InteractableObject component)) {
+            _interactableObjects.Add(component);
+            component.enabled = true;
+            AddListeners(component);
+        }
     }
 
     public void DeactivateInteractable(InteractableObject obj)

@@ -12,7 +12,7 @@ public class CursorManager : MonoBehaviour
     private void Start()
     {
         m_cursor.rectTransform.sizeDelta = m_originalSize;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void HoveredQuest()

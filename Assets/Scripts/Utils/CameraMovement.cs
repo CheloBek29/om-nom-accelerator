@@ -12,11 +12,6 @@ public class CameraMovement : MonoBehaviour
         _cameraTransform = gameObject.GetComponent<Transform>();
     }
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     private void FixedUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X");

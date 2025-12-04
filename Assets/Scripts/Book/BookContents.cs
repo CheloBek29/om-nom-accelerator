@@ -44,6 +44,7 @@ namespace ChristinaCreatesGames.Typography.Book
         private IEnumerator InitializeBook()
         {
             yield return new WaitForEndOfFrame();
+            Debug.Log("Initialize Book");
             SetupContent(bookContentFile.text);
         }
 

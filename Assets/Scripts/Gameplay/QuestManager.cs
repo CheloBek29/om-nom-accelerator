@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
@@ -21,7 +23,15 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        StartQuest();
+        //StartQuest();
+        foreach (var item in m_quests)
+        {
+            if (item._endTrigger && item._endTrigger.TryGetComponent<Button>(out Button btn))
+            {
+                btn.onClick.AddListener(() => {CompleteQuest(item);});
+                item._endTrigger = null;
+            } 
+        }
     }
 
     public void StartQuest()
@@ -42,17 +52,23 @@ public class QuestManager : MonoBehaviour
             Quest quest = m_quests[_activeQuest];
             if (quest._endTrigger == trigger)
             {
-                if (quest._noteToAdd)
-                {
-                    _notebookManager.AddNote(quest._noteToAdd);
-                }
-                _uiManager.HidePopUp();
-                _iManager.DeactivateInteractable(quest._endTrigger.GetComponent<InteractableObject>());
-                if (quest._isStartingTask)
-                    _taskManager.StartTask();
-                _activeQuest++;
-                _isQuestActive = false;
+                CompleteQuest(quest);
             }
         }
+    }
+
+    private void CompleteQuest(Quest quest)
+    {
+        if (quest._noteToAdd)
+        {
+            _notebookManager.AddNote(quest._noteToAdd);
+        }
+        _uiManager.HidePopUp();
+        if (quest._endTrigger)
+            _iManager.DeactivateInteractable(quest._endTrigger.GetComponent<InteractableObject>());
+        if (quest._isStartingTask)
+            _taskManager.StartTask();
+        _activeQuest++;
+        _isQuestActive = false;
     }
 }
