@@ -364,7 +364,7 @@ MonoBehaviour:
   m_sceneChanger: {fileID: 1958771950}
   m_dialogueText: {fileID: 123652321}
   m_typingSpeed: 0.02
-  m_sceneToShowAtTheEnd: MainRoom 1
+  m_sceneToShowAtTheEnd: MainRoom 2
 --- !u!4 &832513670
 Transform:
   m_ObjectHideFlags: 0
