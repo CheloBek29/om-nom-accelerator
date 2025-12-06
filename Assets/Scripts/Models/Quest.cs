@@ -8,4 +8,5 @@ public class Quest
     public string _questText;
     public GameObject _noteToAdd;
     public bool _isStartingTask;
+    public bool _isStartingQuest;
 }
