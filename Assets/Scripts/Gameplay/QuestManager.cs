@@ -59,6 +59,9 @@ public class QuestManager : MonoBehaviour
 
     private void CompleteQuest(Quest quest)
     {
+        _activeQuest++;
+        _isQuestActive = false;
+        
         if (quest._noteToAdd)
         {
             _notebookManager.AddNote(quest._noteToAdd);
@@ -68,7 +71,7 @@ public class QuestManager : MonoBehaviour
             _iManager.DeactivateInteractable(quest._endTrigger.GetComponent<InteractableObject>());
         if (quest._isStartingTask)
             _taskManager.StartTask();
-        _activeQuest++;
-        _isQuestActive = false;
+        if (quest._isStartingQuest)
+            StartQuest();
     }
 }
